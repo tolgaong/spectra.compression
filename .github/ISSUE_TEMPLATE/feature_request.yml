@@ -1,0 +1,37 @@
+name: Feature request
+description: Propose a product, format, API, or documentation capability.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Use case
+      description: Describe the concrete workload and why existing capabilities do not cover it.
+    validations:
+      required: true
+  - type: input
+    id: target
+    attributes:
+      label: Target format or API
+      placeholder: RAR 5 filter shape, ZIP streaming writer, Zstd API
+    validations:
+      required: true
+  - type: textarea
+    id: semantics
+    attributes:
+      label: Required semantics
+      description: Include streaming, limits, cancellation, integrity, compatibility, and ownership expectations.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Interoperability evidence
+      description: When relevant, identify specifications, producing tools, versions, commands, and safe fixtures.
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives and workarounds
+      description: Explain approaches already considered or currently used.

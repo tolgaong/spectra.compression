@@ -1,0 +1,84 @@
+name: Bug report
+description: Report a reproducible defect or compatibility failure.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Do not attach secrets, passwords, private archives, or sensitive data.
+        Use the security policy for vulnerabilities.
+  - type: input
+    id: package
+    attributes:
+      label: Package and version
+      placeholder: Spectra.Compression.Zip, exact version or build identity
+    validations:
+      required: true
+  - type: input
+    id: runtime
+    attributes:
+      label: .NET runtime
+      placeholder: .NET 8.0.x or .NET 10.0.x
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: Windows 11, Ubuntu 24.04, macOS 15
+    validations:
+      required: true
+  - type: input
+    id: format
+    attributes:
+      label: Format and producing implementation
+      placeholder: ZIP produced by 7-Zip, including relevant options
+    validations:
+      required: true
+  - type: dropdown
+    id: api_shape
+    attributes:
+      label: API shape
+      options:
+        - Streaming API
+        - Complete-buffer / compatibility API
+        - Both
+        - Unsure
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Provide safe code, steps, and a minimal non-sensitive sample or generation recipe.
+    validations:
+      required: true
+  - type: textarea
+    id: expected_actual
+    attributes:
+      label: Expected and actual behavior
+      description: Include exact errors, validation results, and when failure occurs.
+    validations:
+      required: true
+  - type: textarea
+    id: stack_trace
+    attributes:
+      label: Stack trace
+      render: text
+  - type: checkboxes
+    id: archive_features
+    attributes:
+      label: Archive features involved
+      options:
+        - label: Encryption or password handling
+        - label: Solid compression
+        - label: Multipart or split volumes
+        - label: Recovery data
+        - label: None of these
+  - type: textarea
+    id: limits
+    attributes:
+      label: Limits and safety settings
+      description: State any decompression limits, path modes, cancellation, and leave-open settings.
