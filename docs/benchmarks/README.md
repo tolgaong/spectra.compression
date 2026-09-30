@@ -3,6 +3,10 @@
 This directory is the public landing page for deliberately promoted benchmark
 reports. No benchmark numbers are published in this bootstrap.
 
+The detailed, number-free [benchmark methodology](methodology.md) defines the
+workload, fairness, correctness, environment, and manual-promotion rules used
+for future reports.
+
 ## Publication boundary
 
 The private source repository retains benchmark code, harness implementation,
